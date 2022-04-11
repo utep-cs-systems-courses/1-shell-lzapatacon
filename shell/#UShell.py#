@@ -130,7 +130,6 @@ def main():
                 else:
                     if not error_state:
                         exec_program(args)
-
                     sys.exit(1)
             else:
                 if bg_enabled is False:

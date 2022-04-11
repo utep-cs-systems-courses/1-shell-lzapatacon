@@ -1,0 +1,16 @@
+import os,sys,time,re
+
+print("Shell:\n")
+
+if '__main__' == __name__:
+    pid = os.getpid()
+    fdOut = os.open("shell-output.txt", os.O_CREAT | os.O_WRONLY)
+    fdIn = os.read(0,10000)
+    test = input()
+
+    if (test == "test"):
+        pid = os.fork()
+        if (pid > 0):
+            print("Parent processing")
+        else:
+            print("wtf am i doing")
